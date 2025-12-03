@@ -1,5 +1,22 @@
 package Multithreading.Problems;
 
+/*
+ *  Congress Bathroom Problem
+ *  -------------------------
+ *  There is a bathroom in Congress shared by two political parties:
+ *  Democrats and Republicans.
+ *
+ *  Rules:
+ *    1. The bathroom has only 3 stalls, so at most 3 people can be inside at once.
+ *    2. Only one party may use the bathroom at a time.
+ *       - If Democrats are inside, all Republicans must wait.
+ *       - If Republicans are inside, all Democrats must wait.
+ *    3. If the bathroom becomes empty and there are people waiting from the
+ *       opposite party, they get priority to enter next.
+ *    4. No starvation:
+ *       - Neither party should be blocked forever if members are waiting.
+ */
+
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
